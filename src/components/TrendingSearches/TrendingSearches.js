@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import {Link} from 'wouter'
 import getTrendingTerms from 'services/getTrendingTermsService'
 
 export default function TrendingSearches(){
@@ -8,7 +9,7 @@ export default function TrendingSearches(){
         getTrendingTerms().then(setTrends)
     },[])
 
-    return <div>
-            {trends.map(trend => <p key={trend}>{trend}</p>)}
+    return <div className="Trending">
+            {trends.map(trend => <Link to={`/search/${trend}`} key={trend}>{trend}</Link>)}
           </div>
 }
