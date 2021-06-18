@@ -1,9 +1,33 @@
 import React from 'react'
+import {Redirect} from 'wouter'
 import Gif from 'components/Gif/index'
-import useGlobalGifs from 'hooks/useGlobalGifs'
+import useSingleGif from 'hooks/useSingleGif'
+import {Helmet} from 'react-helmet'
 
 export default function Detail ({params}){
-    const gifs = useGlobalGifs()
-    const gif = gifs.find(singleGif => singleGif.id===params.id)
-    return <Gif {...gif}/>
+    const {gif, isLoading, isError} = useSingleGif({id: params.id})
+    const title = gif ? gif.title : ''
+  
+    if(isLoading){
+        return (
+                <>
+                    <Helmet>
+                        <title>Loading...</title>
+                    </Helmet>
+                    <h2>Loading...</h2>
+                </>
+                ) 
+    } 
+
+    if(isError) return <Redirect to='/404'/>
+    if(!gif) return null
+
+    return (
+        <>
+            <Helmet>
+                <title>{title} | GIFS</title>
+            </Helmet>
+            <Gif {...gif}/>
+        </>
+        )
 }

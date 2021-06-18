@@ -4,7 +4,7 @@ import ListOfGifs from 'components/ListOfGifs'
 import { useGifs } from 'hooks/useGifs'
 import TrendingSearches from 'components/TrendingSearches'
 import SearchForm from 'components/SearchForm'
-
+import {Helmet} from 'react-helmet'
 
 export default function Home(){
 
@@ -20,6 +20,9 @@ export default function Home(){
 
     return(
         <>  
+            <Helmet>
+                <title>Home | GIFS</title>
+            </Helmet>
             <SearchForm onSubmit={handleSubmit}/>
             <div className="Home">
                 <div>
@@ -31,8 +34,6 @@ export default function Home(){
                     <TrendingSearches/>
                 </div>
             </div>
-            
-            
         </>
     )
 }
