@@ -9,7 +9,7 @@ export default function getGifs({limit = 25, keyword  = 'morty', page = 0} = {})
       const {data} = response
       const gifs = data.map(image => {
           const {url} = image.images.downsized_medium
-          const {images,title,id} = image
+          const {title,id} = image
           return {title, id, url}
       })
       return gifs
