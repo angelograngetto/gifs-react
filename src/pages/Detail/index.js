@@ -25,7 +25,8 @@ export default function Detail ({params}){
     return (
         <>
             <Helmet>
-                <title>{title} | GIFS</title>
+                <title>{title} | RIFS</title>
+                <meta name="description" content={'Showing gif: ' + title}/>
             </Helmet>
             <Gif {...gif}/>
         </>

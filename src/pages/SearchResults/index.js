@@ -35,7 +35,7 @@ export default function SearchResults({params}){
                 ? <h2>Loading</h2>
                 : <> 
                     <Helmet>
-                      <title>{title} | GIFS</title>
+                      <title>{title} | RIFS</title>
                       <meta name="description" content={title}/>
                     </Helmet>
                     <h3>{decodeURI(keyword)}</h3>
