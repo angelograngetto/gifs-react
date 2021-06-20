@@ -9,7 +9,10 @@ export default function TrendingSearches(){
         getTrendingTerms().then(setTrends)
     },[])
 
-    return <div className="Trending">
-            {trends.map(trend => <Link to={`/search/${trend}`} key={trend}>{trend}</Link>)}
+    return <div className="trending">
+            <h3>Trending searches</h3>
+            <div className="trending__list">
+                {trends.map(trend => <Link to={`/search/${trend}`} key={trend}>{trend}</Link>)}
+            </div>
           </div>
 }

@@ -13,8 +13,8 @@ function SearchForm({onSubmit}){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input placeholder="Search a gif here..." onChange={handleChange} type="text" value={keyword}/>
+        <form className="search"onSubmit={handleSubmit}>
+            <input className="search__input" placeholder="Search a gif here..." onChange={handleChange} type="text" value={keyword}/>
         </form>
     )
 }

@@ -1,14 +1,92 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 20px;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #090115;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo h1 {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 0.8rem;
+  margin: 1rem 0 0 0;
+}
+.logo p {
+  color: white;
+  text-align: center;
+  font-size: 0.5rem;
+  margin: -0.8rem 0 1rem 0;
+}
+.Home {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  font-size: 1rem;
+}
+@media screen and (max-width: 800px) {
+  .Home {
+    grid-template-columns: 100%;
+  }
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search__input {
+  width: 18rem;
+  height: 2rem;
+  padding: 1rem;
+  border: none;
+  position: relative;
+  outline: none;
+  border-radius: none;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.search__input:focus {
+  -webkit-box-shadow: inset 0px 0px 0px 0.2rem #ff00ea;
+  -moz-box-shadow: inset 0px 0px 0px 0.2rem #ff00ea;
+  box-shadow: inset 0px 0px 0px 0.2rem #ff00ea;
+}
+.trending {
+  padding: 0.4rem;
+}
+.trending h3 {
+  font-size: 1rem;
+  margin: 1rem ;
+}
+.trending .trending__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.8rem;
+}
+.trending .trending__list a {
+  border-radius: 0.2rem;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  overflow: hidden;
+  background: #ff00ea;
+}
+.trending .trending__list a:hover {
+  background: #99008c;
+}
+footer {
+  text-align: center;
+  color: #e3e3e3;
+  font-size: 1rem;
+  padding: 2rem;
+}
+footer a {
+  color: #e3e3e3;
+  font-size: 1rem;
 }

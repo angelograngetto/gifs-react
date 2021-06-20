@@ -1,0 +1,107 @@
+@snd: #ff00ea;
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 20px;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #090115;
+}
+
+.logo{
+  h1{
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 0.8rem;
+    margin: 1rem 0 0 0;
+  }
+  p{
+    color: white;
+    text-align: center;
+    font-size: 0.5rem;
+    margin: -0.8rem 0 1rem 0;
+  }
+}
+
+
+//Homepage
+
+.Home{
+  display: grid;
+  grid-template-columns: 75% 25%;  
+  font-size: 1rem;
+
+  @media screen and (max-width: 800px){
+    grid-template-columns: 100%;
+  }
+}
+
+//Search component
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search__input{
+  width: 18rem;
+  height: 2rem;
+  padding: 1rem;
+  border: none;
+  position: relative;
+  outline: none;
+  border-radius: none;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  text-align: center;
+  &:focus{
+    -webkit-box-shadow:inset 0px 0px 0px 0.2rem @snd;
+    -moz-box-shadow:inset 0px 0px 0px 0.2rem @snd;
+    box-shadow:inset 0px 0px 0px 0.2rem @snd;
+  }
+}
+
+
+//Trending component
+.trending{
+  padding: 0.4rem;
+  h3{
+    font-size: 1rem;
+    margin: 1rem ;
+  }
+  .trending__list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0.8rem;
+    a{
+      border-radius: 0.2rem;
+      color:white;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      overflow: hidden;
+      background: @snd;
+      &:hover{
+        background: darken(@snd,20%)
+      }
+    }
+  }
+}
+
+//Footer
+footer{
+  text-align: center;
+  color: #e3e3e3;
+  font-size: 1rem;
+  padding: 2rem;
+  a{
+    color: #e3e3e3;
+    font-size: 1rem;
+  }
+}

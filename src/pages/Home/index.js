@@ -26,11 +26,10 @@ export default function Home(){
             <SearchForm onSubmit={handleSubmit}/>
             <div className="Home">
                 <div>
-                    <h3>Última búsqueda</h3>
+                    <h3>Last search{localStorage.getItem('lastKeyword') ? ': '  + localStorage.getItem('lastKeyword') : ''}</h3> 
                     <ListOfGifs gifs={gifs}></ListOfGifs>
                 </div>
                 <div>
-                    <h3 className="App-title">Los gifs más populares</h3>
                     <TrendingSearches/>
                 </div>
             </div>
