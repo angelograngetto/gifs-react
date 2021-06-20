@@ -12,3 +12,21 @@ You can go to the site: https://gifsreact.vercel.app or clone the git and execut
 - npm install
 - Set your api key in services/settings.js
 - npm start
+
+### Screenshots
+<div align="center">
+  
+  <img src="https://i.imgur.com/kmvQb0V.png" width="700px">
+  </br>
+  </br>
+  <img src="https://i.imgur.com/XnsFDyq.png" width="700px">
+  </br>
+  </br>
+  <img src="https://i.imgur.com/mUJDVS5.png" width="700px">
+  </br>
+  </br>
+  <img src="https://i.imgur.com/62qxcLn.png" width="700px">
+  
+  
+</div>
+
