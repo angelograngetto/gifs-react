@@ -1,5 +1,6 @@
 import React, {Suspense} from 'react'
 import useNearScreen from 'hooks/useNearScreen'
+import Loader from 'components/Loader'
 
 
 const TrendingSearches = React.lazy(
@@ -9,7 +10,7 @@ const TrendingSearches = React.lazy(
 export default function LazyTrending(){
     const {isNearScreen, fromRef} = useNearScreen({distance: '200px'})
     return <div ref={fromRef}>
-        <Suspense fallback={"I'm loading..."}>
+        <Suspense fallback={<Loader/>}>
         {isNearScreen ? <TrendingSearches/> : null}
         </Suspense>
     </div>

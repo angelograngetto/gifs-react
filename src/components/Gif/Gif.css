@@ -17,9 +17,11 @@
   text-decoration: none;
   position: relative;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .gif__link:hover{
+  box-sizing: border-box;
   border: solid 0.5rem rgb(255, 0, 234);
 }
 
@@ -36,6 +38,7 @@
   width: 100%;
   object-fit: contain;
   vertical-align: top;
+  max-height: 30rem;
 }
 
 i {

@@ -1,4 +1,4 @@
-import {Redirect,Switch, Route} from 'wouter'
+import {Redirect,Switch,Route,Link} from 'wouter'
 import './App.css';
 import Home from './pages/Home/index'
 import Detail from './pages/Detail/index'
@@ -16,7 +16,7 @@ function App() {
     }>
       <div className="App">
         <div className="logo">
-          <h1>RIFS</h1>
+          <h1><Link to="/">RIFS</Link></h1>
           <p>The react gifs application :D</p>
         </div>
         <section className="App-content">
@@ -27,7 +27,7 @@ function App() {
               component={Home}
             />
             <Route 
-              path="/search/:keyword" 
+              path="/search/:keyword/:rating?" 
               component={SearchResults}
             />
             <Route 

@@ -8,15 +8,7 @@ import {Helmet} from 'react-helmet'
 
 export default function Home(){
 
-    const [path, pushLocation] = useLocation()
     const {loading, gifs} = useGifs()
-
-    console.log(path)
-    console.log(loading)
-    const handleSubmit = useCallback(({keyword}) => {
-        pushLocation(`/search/${keyword}`)
-    },[pushLocation])
-
 
     return(
         <>  
@@ -24,10 +16,10 @@ export default function Home(){
                 <title>Home | RIFS</title>
                 <meta name="description" content='A react gifs application'/>
             </Helmet>
-            <SearchForm onSubmit={handleSubmit}/>
+            <SearchForm/>
             <div className="Home">
                 <div>
-                    <h3>{localStorage.getItem('lastKeyword') ? 'Last search: '  + localStorage.getItem('lastKeyword') : 'Random gifs'}</h3> 
+                    <h3>{localStorage.getItem('lastKeyword') ? 'Last search: '  + decodeURI(localStorage.getItem('lastKeyword')).toUpperCase() : 'Random gifs'}</h3> 
                     <ListOfGifs gifs={gifs}></ListOfGifs>
                 </div>
                 <div>
